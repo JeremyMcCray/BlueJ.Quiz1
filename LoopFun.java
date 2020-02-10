@@ -51,15 +51,14 @@ public class LoopFun
           char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
           String ans = "";
           char[] worda = word.toCharArray();
-          for(int i=0;i<=worda.length-1; i++ ){
-            for(int j=0; j <= alphabet.length-1; j++){
-                if(worda[i] == alphabet[j+3]){
-                ans+=alphabet[j];
-                }
+          for(int i=0;i<worda.length; i++ ){
+            for(int j=0; j < alphabet.length; j++){
+                if(worda[i] == alphabet[j]){      
+                ans+=alphabet[(j+3) %26];         
             };
-        }
-           
-            
+      }// kris helped me with this one becasue i suck
+    }
           return ans;
-      }
 }
+}
+
